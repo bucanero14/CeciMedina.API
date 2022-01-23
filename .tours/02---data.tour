@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "02 - Data",
+  "steps": [
+    {
+      "file": "CeciMedina.Data/ApplicationDbContext.cs",
+      "description": "Esta es la clase que va a configurar a Entity Framework. Aquí es donde se configuran los DbSet de los modelos de la capa de Core para que se conviertan en tablas.",
+      "line": 12,
+      "selection": {
+        "start": {
+          "line": 4,
+          "character": 1
+        },
+        "end": {
+          "line": 4,
+          "character": 39
+        }
+      }
+    },
+    {
+      "file": "CeciMedina.Data/Repository.cs",
+      "description": "Aquí se realiza la implementación de la interfaz de IRepository<> que estaba en la capa de Core.",
+      "line": 14
+    },
+    {
+      "file": "CeciMedina.Data/UnitOfWork.cs",
+      "description": "Aquí se implementa la unidad de trabajo que se define en la capa de Core. Lo interesante de esta implementación es que nos permite crear una nueva instancia de IRepository<> que se necesite dentro de la instancia de UnitOfWork. De esta forma, nos evitamos tener que estar implementando un nuevo IRepository con cada objeto nuevo que agregamos.",
+      "line": 11
+    },
+    {
+      "file": "CeciMedina.Data/Configuration/ConfigureServicesExtensions.cs",
+      "description": "Se configuran los servicios de la capa Data en un método para ser ejecutado en la capa del API. Todas las implementaciones de interfaces que se hagan en esta capa se implementan aquí.",
+      "line": 8
+    },
+    {
+      "file": "CeciMedina.Data/Configuration/Seed.cs",
+      "description": "Este método inserta información de prueba o inicial cada vez que el proyecto inicializa. Si las colecciones ya tienen datos, esta información no se inserta, evitando registros duplicados.",
+      "line": 12
+    }
+  ],
+  "ref": "main"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "01 - Core",
+  "steps": [
+    {
+      "file": "CeciMedina.Core/Models/BaseEntity.cs",
+      "description": "Esta es la entidad que van a heredar todos los modelos de la base de datos. Solo contiene el Id, pero se utiliza para limitar el funcionamiento de los repositorios y servicios a clases que hereden esta entidad",
+      "line": 9
+    },
+    {
+      "file": "CeciMedina.Core/Data/IRepository.cs",
+      "description": "Esta va a ser la interfaz que se va a implementar en el proyecto de Data. Si te das cuenta, es una interfaz genérica que tiene como regla que el tipo genérico TEntity herede BaseEntity, la entidad base que vimos en el paso anterior.",
+      "line": 10
+    },
+    {
+      "file": "CeciMedina.Core/Data/IUnitOfWork.cs",
+      "description": "Esta interfaz es la unidad de trabajo que se va a encargar de guardar todos los cambios realizados a los repositorios. Esta interfaz se implementa en la capa de Data y solo puedes acceder a los repositorios a través de ella.",
+      "line": 12
+    },
+    {
+      "file": "CeciMedina.Core/Services/IService.cs",
+      "description": "Interfaz de Servicio que solo incluye una unidad de trabajo, se implementa con la interfaz genérica.",
+      "line": 6
+    },
+    {
+      "file": "CeciMedina.Core/Services/IService'1.cs",
+      "description": "Interfaz genérica, esta interfaz va a implementar las funcionalidades del repositorio y devolver resultados paginados. Esta interfaz igual pone como regla que el tipo que se utilice herede de la clase BaseEntity.",
+      "line": 13
+    },
+    {
+      "file": "CeciMedina.Core/Services/IPuntoDeVentaService.cs",
+      "description": "Interfaz para lógica compleja. A lo largo del proyecto vamos a tener que aplicar lógica compleja, por lo que se tendrán que generar interfaces propias como ésta. La finalidad de esta interfaz de punto de venta es implementar toda la funcionalidad de la caja, como la generación de una venta, devolución, cotizaciones y encargos. La terminal de punto de venta no solo se trata de agregar un registro a una tabla como si fuera un catálogo, sino que igual hay que actualizar inventarios, por lo que más de un repositorio será utilizado por la unidad de trabajo en esta implementación.",
+      "line": 6
+    }
+  ]
+}

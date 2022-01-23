@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CeciMedina.Core\CeciMedina.Core.csproj" />
+    <ProjectReference Include="..\CeciMedina.Data\CeciMedina.Data.csproj" />
+    <ProjectReference Include="..\CeciMedina.Infrastructure\CeciMedina.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

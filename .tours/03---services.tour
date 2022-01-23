@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "03 - Services",
+  "steps": [
+    {
+      "file": "CeciMedina.Services/Service.cs",
+      "description": "Implementación de la interfaz IService<> que se define en la capa de Core. Utiliza una instancia de UnitOfWork para poder acceder al repositorio en cuestión, y ejecuta lógica externa para poder mover la colección del repositorio y guardar cambios.",
+      "line": 12
+    },
+    {
+      "file": "CeciMedina.Services/PuntoDeVentaService.cs",
+      "description": "Implementación de IPuntoDeVentaService de la capa Core. Aquí puedes ver cómo se utilizan varios repositorios para realizar la lógica que se espera de una venta.",
+      "line": 11
+    },
+    {
+      "file": "CeciMedina.Services/Configuration/ConfigureServicesExtensions.cs",
+      "description": "Igual que como con la capa de Data. Aquí se configura la capa de Services y sus respectivas inyecciones.",
+      "line": 7
+    }
+  ],
+  "ref": "main"
+}

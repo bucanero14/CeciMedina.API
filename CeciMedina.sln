@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeciMedina.Tests", "API.Tests\CeciMedina.Tests.csproj", "{A6F4C90C-AC97-422A-917F-38E9E4F88B6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeciMedina.API", "API\CeciMedina.API.csproj", "{68E624FC-A6D9-40B2-8D93-76294EEB9C03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeciMedina.Core", "CeciMedina.Core\CeciMedina.Core.csproj", "{F7669C05-1A46-4106-8335-2ED986B84E0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeciMedina.Infrastructure", "CeciMedina.Infrastructure\CeciMedina.Infrastructure.csproj", "{A5E8887A-150C-4523-B185-EF0CAE719490}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeciMedina.Services", "CeciMedina.Services\CeciMedina.Services.csproj", "{0C13D801-EE9F-4695-B1C5-69D134107C02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeciMedina.Data", "CeciMedina.Data\CeciMedina.Data.csproj", "{75CBE518-203E-47D6-AEBA-D54845368336}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6F4C90C-AC97-422A-917F-38E9E4F88B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F4C90C-AC97-422A-917F-38E9E4F88B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F4C90C-AC97-422A-917F-38E9E4F88B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F4C90C-AC97-422A-917F-38E9E4F88B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E624FC-A6D9-40B2-8D93-76294EEB9C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E624FC-A6D9-40B2-8D93-76294EEB9C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E624FC-A6D9-40B2-8D93-76294EEB9C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E624FC-A6D9-40B2-8D93-76294EEB9C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7669C05-1A46-4106-8335-2ED986B84E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7669C05-1A46-4106-8335-2ED986B84E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7669C05-1A46-4106-8335-2ED986B84E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7669C05-1A46-4106-8335-2ED986B84E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E8887A-150C-4523-B185-EF0CAE719490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E8887A-150C-4523-B185-EF0CAE719490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E8887A-150C-4523-B185-EF0CAE719490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E8887A-150C-4523-B185-EF0CAE719490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C13D801-EE9F-4695-B1C5-69D134107C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C13D801-EE9F-4695-B1C5-69D134107C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C13D801-EE9F-4695-B1C5-69D134107C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C13D801-EE9F-4695-B1C5-69D134107C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CBE518-203E-47D6-AEBA-D54845368336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CBE518-203E-47D6-AEBA-D54845368336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CBE518-203E-47D6-AEBA-D54845368336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CBE518-203E-47D6-AEBA-D54845368336}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBDB67FB-6017-4901-A6D3-4D48B5F8B3F8}
+	EndGlobalSection
+EndGlobal

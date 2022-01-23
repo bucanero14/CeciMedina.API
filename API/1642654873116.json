@@ -1,0 +1,19 @@
+[
+  {
+    "Id": "2f8607e4-e12b-42ba-b820-5ce3edd09ebc",
+    "UserName": "Administrador",
+    "NormalizedUserName": "ADMINISTRADOR",
+    "Email": "user@example.com",
+    "NormalizedEmail": "USER@EXAMPLE.COM",
+    "EmailConfirmed": "0",
+    "PasswordHash": "AQAAAAEAACcQAAAAEItZlqZBI89GNRcoTh5+pqZq5D04kYjWLXG8B99VbirMJAsyznZF6LUJ/8YByjRZuA==",
+    "SecurityStamp": "GX46TTK4ID5SSDFYVBWI5TLF5RU6V2JI",
+    "ConcurrencyStamp": "d9bba46c-8249-4025-b88a-81a270262c89",
+    "PhoneNumber": "NULL",
+    "PhoneNumberConfirmed": "0",
+    "TwoFactorEnabled": "0",
+    "LockoutEnd": "NULL",
+    "LockoutEnabled": "1",
+    "AccessFailedCount": "0"
+  }
+]
