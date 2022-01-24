@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CeciMedina.Core\CeciMedina.Core.csproj" />
     <ProjectReference Include="..\CeciMedina.Data\CeciMedina.Data.csproj" />
     <ProjectReference Include="..\CeciMedina.Infrastructure\CeciMedina.Infrastructure.csproj" />

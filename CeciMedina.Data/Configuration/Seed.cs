@@ -15,7 +15,7 @@ namespace CeciMedina.Data.Configuration
             {
                 var user = new IdentityUser
                 {
-                    UserName = "Administrador"
+                    UserName = "administrador"
                 };
 
                 await userManager.CreateAsync(user, "Password123!");

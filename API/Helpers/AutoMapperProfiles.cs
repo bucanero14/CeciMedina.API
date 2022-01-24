@@ -15,6 +15,9 @@ namespace CeciMedina.API.Helpers
             CreateMap<Sucursal, SucursalModel>()
                 .ReverseMap();
 
+            CreateMap<Categoria, CategoriaModel>()
+                .ReverseMap();
+
             CreateMap<DetallePedido, DetallePedidoModel>()
                 .ForMember(dest => dest.ProductoId,
                     opt => opt.MapFrom(src => src.ProductoId))
