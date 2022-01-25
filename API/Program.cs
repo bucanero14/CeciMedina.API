@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CeciMedina.Core.Models.Identity;
 using CeciMedina.Data;
 using CeciMedina.Data.Configuration;
 using Microsoft.AspNetCore.Identity;
@@ -27,9 +28,10 @@ namespace CeciMedina.API
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
-                    var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+                    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                     context.Database.Migrate();
-                    Seed.SeedData(context, userManager).Wait();
+                    Seed.SeedData(context, userManager, roleManager).Wait();
                 }
                 catch (Exception ex)
                 {

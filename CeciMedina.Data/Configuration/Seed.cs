@@ -3,22 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CeciMedina.Core.Models;
+using CeciMedina.Core.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 
 namespace CeciMedina.Data.Configuration
 {
     public class Seed
     {
-        public static async Task SeedData(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public static async Task SeedData(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
+            if (!roleManager.Roles.Any())
+            {
+                var role = new IdentityRole
+                {
+                    Name = "Admin"
+                };
+
+                await roleManager.CreateAsync(role);
+            }
+            
             if (!userManager.Users.Any())
             {
-                var user = new IdentityUser
+                var user = new ApplicationUser
                 {
-                    UserName = "administrador"
+                    UserName = "admin",
+                    Nombre = "Raúl",
+                    ApellidoPaterno = "Magaña",
+                    ApellidoMaterno = "Gonzalez",
+                    FechaDeNacimiento = new DateTime(1989, 12, 6)
                 };
 
                 await userManager.CreateAsync(user, "Password123!");
+                await userManager.AddToRoleAsync(user, "Admin");
             }
 
             if (!context.FormasPago.Any())

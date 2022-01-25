@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using CeciMedina.API.Models;
 using CeciMedina.Core.Models;
+using CeciMedina.Core.Models.Identity;
 using CeciMedina.Core.Tools;
 using Microsoft.AspNetCore.SignalR;
 
@@ -16,6 +17,9 @@ namespace CeciMedina.API.Helpers
                 .ReverseMap();
 
             CreateMap<Categoria, CategoriaModel>()
+                .ReverseMap();
+
+            CreateMap<ApplicationUser, UserModel>()
                 .ReverseMap();
 
             CreateMap<DetallePedido, DetallePedidoModel>()

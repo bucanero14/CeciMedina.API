@@ -12,6 +12,7 @@ using System.Text;
 using CeciMedina.API.Helpers;
 using CeciMedina.Data;
 using AutoMapper;
+using CeciMedina.Core.Models.Identity;
 using CeciMedina.Data.Configuration;
 using CeciMedina.Services.Configuration;
 
@@ -46,7 +47,7 @@ namespace CeciMedina.API
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
             // For Identity  
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
