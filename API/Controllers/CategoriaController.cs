@@ -5,7 +5,6 @@ using CeciMedina.API.Models;
 using CeciMedina.Core.Models;
 using CeciMedina.Core.Services;
 using CeciMedina.Core.Tools;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -36,6 +35,47 @@ namespace CeciMedina.API.Controllers
         public async Task<ActionResult<CategoriaModel>> Get(int id)
         {
             return _mapper.Map<Categoria, CategoriaModel>(await _categoriaSvc.GetByIdAsync(id));
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<CategoriaModel>> Post([FromBody] CategoriaModel model)
+        {
+            var objectToInsert = _mapper.Map<CategoriaModel, Categoria>(model);
+
+            await _categoriaSvc.AddAsync(objectToInsert);
+
+            if (objectToInsert.Id != 0)
+            {
+                return CreatedAtRoute("GetCategoria", new {id = objectToInsert.Id}, model);
+            }
+
+            return BadRequest("Ocurrió un error");
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, [FromBody] CategoriaModel model)
+        {
+            var objectFromDb = await _categoriaSvc.GetByIdAsync(id);
+            if (objectFromDb is null)
+            {
+                return NotFound();
+            }
+            
+            var objectToUpdate = _mapper.Map(model, objectFromDb);
+
+            await _categoriaSvc.UpdateAsync(objectToUpdate);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var objectToDelete = await _categoriaSvc.GetByIdAsync(id);
+            
+            await _categoriaSvc.DeleteAsync(objectToDelete);
+
+            return NoContent();
         }
 
     }

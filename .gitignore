@@ -12,6 +12,7 @@
 mydb.db
 mydb.db-shm
 mydb.db-wal
+.vscode/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
